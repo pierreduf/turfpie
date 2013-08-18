@@ -1,0 +1,7 @@
+import os
+import datetime
+
+out_folder = "output/"
+
+def verif_num_cheval:
+   return 0

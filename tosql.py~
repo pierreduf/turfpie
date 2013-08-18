@@ -143,8 +143,7 @@ def tosql_insert(data,cur,table_name):
 
   if (type(data[0]) != tuple) and (type(data[0]) != list):    
      result='"'+'","'.join(str(item) for item in data)+'"'
-     query = "insert into " + table_name + """ values(%s);""" %result
-     cur.execute(query)   
+     cur.execute("""insert into %s values (%s);""",(table_name,result))	    
   
   else: 
      for row in data:  

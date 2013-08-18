@@ -24,8 +24,8 @@ def parse_infos_course(urlsource):
 
   boite_entete = pronos_page.find_all("div","boite4rond")[0]
 
-  num_course = urlsource[urlsource.rfind("/")+1:]
-  num_course = num_course[:num_course.find("_")]
+  num_course=urlsource[urlsource.find("PMU")+15:]
+  num_course=num_course[num_course.find("/")+1:num_course.find("_")]
 
   nom_course = boite_entete.find_all("h1")[0].contents[0]
   nom_course = sanitize.s(nom_course[:nom_course.find(' - ')])

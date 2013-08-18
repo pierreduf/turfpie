@@ -40,8 +40,8 @@ def parse_infos_chevaux(urlsource):
    
      sstable = cheval.find_all("td")
 
-     num_course = urlsource[urlsource.rfind("/")+1:]
-     num_course = num_course[:num_course.find("_")]
+     num_course=urlsource[urlsource.find("PMU")+15:]
+     num_course=num_course[num_course.find("/")+1:num_course.find("_")]
 
      if sstable[0].string == "NP":
 	result_cheval.append([num_course,sstable[1].string,\

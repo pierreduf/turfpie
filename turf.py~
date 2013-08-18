@@ -162,7 +162,6 @@ elif choice == "3":
        pronos_file.close()
     print("OK !")
 
-# RECUPERER RESULTATS ET RAPPORTS
 
 elif choice == "4":
 

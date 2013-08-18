@@ -71,7 +71,7 @@ def get_id_chevaux(mini,maxi):
    
    try:
      nom = cartouche.find("h1").contents[0].encode("ascii","ignore")
-     nom = sanitize.s(nom[nom.find("chev")+7:])
+     nom = nom[nom.find("chev")+7:]
    except:
      nom = ''
      nb_errors = nb_errors+1
@@ -92,37 +92,37 @@ def get_id_chevaux(mini,maxi):
      nb_errors = nb_errors+1
 
    try:
-     pere = sanitize.s(cart_infos.contents[4].encode("ascii","ignore")[6:])
+     pere = cart_infos.contents[4].encode("ascii","ignore")[6:]
    except:
      pere = ''
      nb_errors = nb_errors+1
 
    try:
-     mere = sanitize.s(cart_infos.contents[6].encode("ascii","ignore")[6:])
+     mere = cart_infos.contents[6].encode("ascii","ignore")[6:]
    except:
      mere = ''
      nb_errors = nb_errors+1
 
    try:
-     pere_mere = sanitize.s(cart_infos.contents[8].encode("ascii","ignore")[13:])
+     pere_mere = cart_infos.contents[8].encode("ascii","ignore")[13:]
    except:
      pere_mere = ''
      nb_errors = nb_errors+1
 
    try:
-     proprio = sanitize.s(cart_infos.contents[11].encode("ascii","ignore")[14:])
+     proprio = cart_infos.contents[11].encode("ascii","ignore")[14:]
    except:
      proprio = ''
      nb_errors = nb_errors+1
 
    try:
-     entraineur = sanitize.s(cart_infos.contents[13].encode("ascii","ignore")[13:])
+     entraineur = cart_infos.contents[13].encode("ascii","ignore")[13:]
    except:
      entraineur = ''
      nb_errors = nb_errors+1
 
    try:
-     eleveur = sanitize.s(cart_infos.contents[15].encode("ascii","ignore")[10:])
+     eleveur = cart_infos.contents[15].encode("ascii","ignore")[10:]
    except:
      eleveur = ''
      nb_errors = nb_errors+1
