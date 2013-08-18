@@ -1,4 +1,0 @@
-SORT LES 10 PLUS GROS GAINS DE CHEVAUX, TRIER PAR GAIN
-
-select num_cheval,nom_cheval, cast(gain_cheval as signed integer) from id_chevaux where gain_cheval not like "0" order by cast(gain_cheval as signed integer) desc limit 10;
-
